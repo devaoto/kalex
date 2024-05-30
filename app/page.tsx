@@ -4,6 +4,7 @@ import AnimeSlider from "@/components/Slider";
 import Footer from "@/components/footer";
 import { getPopularAnime, getTrendingAnime } from "@/functions/anime";
 import { HeroSlider } from "@/components/HeroSlider";
+import { Link } from "@nextui-org/link";
 
 export default function Home() {
   const [trending, popular] = use(
@@ -13,9 +14,19 @@ export default function Home() {
   return (
     <div>
       <HeroSlider animeData={trending.results} />
-      <h1 className="text-4xl font-bold">Trending Anime</h1>
+      <div className="mb-2 mt-10 flex justify-between text-4xl font-medium">
+        <span>| Trending Anime</span>{" "}
+        <Link href="/trending" underline="hover">
+          View More
+        </Link>
+      </div>
       <AnimeSlider animeData={trending.results} />
-      <h1 className="mt-10 text-4xl font-bold">All Time Popular</h1>
+      <div className="mb-2 mt-10 flex justify-between text-4xl font-medium">
+        <span>| All Time Popular</span>{" "}
+        <Link href="/popular" underline="hover">
+          View More
+        </Link>
+      </div>
       <AnimeSlider animeData={popular.results} />
       <Footer />
     </div>
