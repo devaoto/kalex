@@ -3,11 +3,11 @@
   margin: auto;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
-  --slide-size: 75%;
+  --slide-size: 65%;
   --slide-spacing-sm: 1.6rem;
   --slide-size-sm: 40%;
   --slide-spacing-lg: 2rem;
-  --slide-size-lg: calc(75% / 3);
+  --slide-size-lg: calc(65% / 3);
 }
 .embla__viewport {
   overflow: hidden;

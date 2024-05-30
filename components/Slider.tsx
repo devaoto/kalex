@@ -57,10 +57,10 @@ export default function AnimeSlider({
               >
                 <Image
                   alt={anime.title.english ?? anime.title.romaji}
-                  className="max-h-[360px] min-h-[360px] min-w-[255px] max-w-[255px] object-cover"
+                  className="max-h-[290px] min-h-[290px] min-w-[225px] max-w-[225px] object-cover"
                   src={anime.image}
                 />
-                <h1 className="mt-1 line-clamp-1 font-semibold">
+                <h1 className="mt-1 max-w-[225px] truncate font-semibold">
                   {anime.title.english ??
                     anime.title.userPreferred ??
                     anime.title.romaji}
@@ -68,7 +68,10 @@ export default function AnimeSlider({
                 <div className="flex items-center gap-2 font-medium">
                   <p>{anime.status}</p>
                   <div className="size-[6px] rounded-full bg-foreground" />
-                  <p>{anime.totalEpisodes} Episodes</p>
+                  <p>
+                    {anime.totalEpisodes}{" "}
+                    {anime.status === "Completed" ? "EPS" : "Episodes"}
+                  </p>
                   <div className="size-[6px] rounded-full bg-foreground" />
                   <p>{anime.type}</p>
                 </div>
