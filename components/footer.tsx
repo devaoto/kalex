@@ -73,7 +73,7 @@ function Footer() {
             className=" ms-5 hover:text-gray-900 dark:hover:text-white lg:ms-0"
           >
             <Tooltip content="GitHub">
-              <FaGithub className="h-5 w-5" />
+              <FcGithub className="h-5 w-5" />
             </Tooltip>
             <span className="sr-only">GitHub account</span>
           </Link>
@@ -83,7 +83,7 @@ function Footer() {
             className=" ms-5 hover:text-gray-900 dark:hover:text-white"
           >
             <Tooltip content="Discord Community">
-              <FaDiscord className="h-[22px] w-[22px]" />
+              <FcDiscord className="h-[22px] w-[22px]" />
             </Tooltip>
             <span className="sr-only">Discord community</span>
           </Link>
