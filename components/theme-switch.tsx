@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
-import { SwitchProps, useSwitch } from "@nextui-org/switch";
+import { SwitchProps, useSwitch } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
@@ -56,7 +56,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         className={slots.wrapper({
           class: clsx(
             [
-              "w-auto h-auto",
+              "h-auto w-auto",
               "bg-transparent",
               "rounded-lg",
               "flex items-center justify-center",
