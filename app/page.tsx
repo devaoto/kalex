@@ -1,7 +1,7 @@
 import { use } from "react";
 
 import AnimeSlider from "@/components/Slider";
-import Footer from '@/components/footer';
+import Footer from "@/components/footer";
 import { getPopularAnime, getTrendingAnime } from "@/functions/anime";
 
 export default function Home() {
