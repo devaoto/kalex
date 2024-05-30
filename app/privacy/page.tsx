@@ -15,13 +15,13 @@ const PrivacyPolicy = () => {
       <h1 className="text-2xl">Last updated: 05/30/2024</h1>
       <p className="mb-4 text-lg">
         Kalex is an anime streaming site where you can watch anime online in HD
-        quality with English subtitles or dubbing. Watch all the 
-        anime you want without any Ads.
+        quality with English subtitles or dubbing. Watch all the anime you want
+        without any Ads.
       </p>
       <p className="mb-4 text-lg">
-        At Kalex, we take your privacy seriously. We are committed to
-        protecting the privacy of our users and ensuring that all personal
-        information provided to us remains confidential.
+        At Kalex, we take your privacy seriously. We are committed to protecting
+        the privacy of our users and ensuring that all personal information
+        provided to us remains confidential.
       </p>
       <p className="mb-4 text-lg">
         Kalex does not collect any personal information from its users. We do
@@ -41,10 +41,9 @@ const PrivacyPolicy = () => {
       </p>
       <p className="mb-4 text-lg">
         <strong>Changes to Privacy Policy</strong>
-        We may update our Privacy Policy from time to time.
-        We will notify users of any changes by posting
-        the new policy on this page.
-        </p>
+        We may update our Privacy Policy from time to time. We will notify users
+        of any changes by posting the new policy on this page.
+      </p>
     </div>
   );
 };
