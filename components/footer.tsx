@@ -1,5 +1,5 @@
 import React from "react";
-import { FcGithub, FcDiscord } from "@/components/icons";
+import { GithubIcon, DiscordIcon } from "@/components/icons";
 import { Link, Tooltip } from "@nextui-org/react";
 import { Yeseva_One } from "next/font/google";
 
@@ -73,7 +73,7 @@ function Footer() {
             className=" ms-5 hover:text-gray-900 dark:hover:text-white lg:ms-0"
           >
             <Tooltip content="GitHub">
-              <FcGithub className="h-5 w-5" />
+              <GithubIcon className="h-5 w-5" />
             </Tooltip>
             <span className="sr-only">GitHub account</span>
           </Link>
@@ -83,7 +83,7 @@ function Footer() {
             className=" ms-5 hover:text-gray-900 dark:hover:text-white"
           >
             <Tooltip content="Discord Community">
-              <FcDiscord className="h-[22px] w-[22px]" />
+              <DiscordIcon className="h-[22px] w-[22px]" />
             </Tooltip>
             <span className="sr-only">Discord community</span>
           </Link>
