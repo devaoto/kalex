@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaDiscord } from 'react-icons/fa';
+import { FaGithub, FaDiscord } from '@/components/icons';
 import { Link, Tooltip } from '@nextui-org/react';
 import { Yeseva_One } from 'next/font/google';
 
