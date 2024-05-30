@@ -1,6 +1,7 @@
 import { use } from "react";
 
 import AnimeSlider from "@/components/Slider";
+import Footer from '@/components/footer';
 import { getPopularAnime, getTrendingAnime } from "@/functions/anime";
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
       <AnimeSlider animeData={trending.results} />
       <h1 className="mt-10 text-4xl font-bold">All Time Popular</h1>
       <AnimeSlider animeData={popular.results} />
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 }
