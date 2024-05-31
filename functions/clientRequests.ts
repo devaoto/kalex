@@ -114,7 +114,11 @@ export const getTrendingAnime = async (page = 1, perPage = 24) => {
             thumbnail: item.trailer?.thumbnail,
           },
           description: item.description,
-          status: item.status,
+          status: item.Ongoing,
+                  item.Completed,
+                  item.Hiatus,
+                  item.Not_yet_aired,
+                  item.Cancelled,
           cover:
             item.bannerImage ??
             item.coverImage.extraLarge ??
@@ -286,63 +290,3 @@ export const getPopularAnime = async (page = 1, perPage = 24) => {
     }
   }
 };
-
-export async function getEpisodes(id: string) {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DOMAIN}/api/v1/episodes/${id}`,
-    );
-    let episodes: SiteEpisode[] | undefined;
-
-    try {
-      episodes = ((await response.json()) as SiteAnime[]).find(
-        (p) => p.providerId === 'anizone',
-      )?.episodes;
-    } catch (error) {
-      episodes = [];
-    }
-    return episodes;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-export async function getSkipTimes(malId: string, episodeNumber: number) {
-  const skipResponse = await fetch(
-    `https://api.aniskip.com/v2/skip-times/${malId}/${Number(
-      episodeNumber,
-    )}?types[]=ed&types[]=mixed-ed&types[]=mixed-op&types[]=op&types[]=recap&episodeLength=`,
-  );
-
-  const skipData = await skipResponse.json();
-  const op =
-    skipData?.results?.find((item: any) => item.skipType === 'op') || null;
-  const ed =
-    skipData?.results?.find((item: any) => item.skipType === 'ed') || null;
-  const episodeLength =
-    skipData?.results?.find((item: any) => item.episodeLength)?.episodeLength ||
-    0;
-
-  const skiptime: any[] = [];
-
-  if (op?.interval) {
-    skiptime.push({
-      startTime: op.interval.startTime ?? 0,
-      endTime: op.interval.endTime ?? 0,
-      text: 'Opening',
-    });
-  }
-  if (ed?.interval) {
-    skiptime.push({
-      startTime: ed.interval.startTime ?? 0,
-      endTime: ed.interval.endTime ?? 0,
-      text: 'Ending',
-    });
-  } else {
-    skiptime.push({
-      startTime: op?.interval?.endTime ?? 0,
-      endTime: episodeLength,
-      text: '',
-    });
-  }
-}
