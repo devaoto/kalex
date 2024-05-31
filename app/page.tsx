@@ -3,8 +3,8 @@ import { use } from "react";
 import AnimeSlider from "@/components/Slider";
 import Footer from "@/components/footer";
 import { getPopularAnime, getTrendingAnime } from "@/functions/anime";
-import { HeroSlider } from "@/components/HeroSlider";
 import { Link } from "@nextui-org/link";
+import { HeroSlider } from "@/components/HeroSlider";
 
 export default function Home() {
   const [trending, popular] = use(

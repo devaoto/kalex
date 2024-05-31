@@ -1,6 +1,5 @@
 "use client";
 import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
-
 import React from "react";
 
 const PrivacyPolicy = () => {

@@ -151,6 +151,9 @@ export interface TrendingAnimeResponse {
     month: any;
   };
   type: string;
+  currentPage: number;
+  hasNextPage: boolean;
+  results: ConsumetAnime[];
 }
 
 export interface PopularAnimeResponse {
@@ -186,6 +189,9 @@ export interface PopularAnimeResponse {
     month: any;
   };
   type: string;
+  currentPage: number;
+  hasNextPage: boolean;
+  results: ConsumetAnime[];
 }
 
 export interface ExtendedAnimePage extends ConsumetAnimePage {
