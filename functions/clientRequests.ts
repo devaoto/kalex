@@ -1,5 +1,5 @@
-import { ConsumetAnimePage } from '@/types/consumet';
-import { SiteAnime, SiteEpisode } from '@/types/site';
+import { ConsumetAnimePage } from "@/types/consumet";
+import { SiteAnime, SiteEpisode } from "@/types/site";
 
 export interface ExtendedAnimePage extends ConsumetAnimePage {
   totalPages: number;

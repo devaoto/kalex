@@ -1,5 +1,5 @@
-import type { AnimeData } from './anify';
-import type { ConsumetRecommendation } from './consumet';
+import type { AnimeData } from "./anify";
+import type { ConsumetRecommendation } from "./consumet";
 
 export interface AnimeInfo extends AnimeData {
   recommendations: ConsumetRecommendation[];

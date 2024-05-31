@@ -3,7 +3,7 @@
 import { getTrendingAnime } from "@/functions/clientRequests";
 import { ExtendedAnimePage } from "@/types/consumet";
 import { useEffect, useState } from "react";
-import { Card } from "./Card";
+import { Card } from "./card";
 import { Pagination } from "@nextui-org/react";
 
 export default function Trending() {

@@ -4,14 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { Button, Image } from "@nextui-org/react";
 
-import { Anime } from "@/types/consumet";
+import { ConsumetAnime } from "@/types/consumet";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/styles/swiper.css";
 
-export function HeroSlider({ animeData }: { animeData: Anime[] }) {
+export function HeroSlider({ animeData }: { animeData: ConsumetAnime[] }) {
   return (
     <Swiper
       autoplay={{
