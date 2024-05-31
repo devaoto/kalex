@@ -1,10 +1,14 @@
 "use client";
 
-import { getTrendingAnime } from "@/functions/clientRequests";
-import { ExtendedAnimePage } from "@/types/consumet";
 import { useEffect, useState } from "react";
+
 import { Card } from "./card";
+
 import { Pagination } from "@nextui-org/react";
+
+import { getTrendingAnime } from "@/functions/clientRequests";
+
+import { ExtendedAnimePage } from "@/types/consumet";
 
 export default function Trending() {
   const [page, setPage] = useState(1);
