@@ -1,10 +1,10 @@
 "use client";
 
-import { Image, Link, Tooltip } from "@nextui-org/react";
-import { motion } from "framer-motion";
 import { GenerateColoredElementByStatus } from "@/functions/jsxUtilityFunctions";
 import useTruncate from "@/hooks/useTruncate";
 import { ConsumetAnime } from "@/types/consumet";
+import { Image, Link, Tooltip } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export const Card = ({ anime }: { anime: ConsumetAnime }) => {
   return (

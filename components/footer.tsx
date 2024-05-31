@@ -1,9 +1,6 @@
 import React from "react";
-
 import { Yeseva_One } from "next/font/google";
-
 import { GithubIcon, DiscordIcon } from "@/components/icons";
-
 import { Link, Tooltip } from "@nextui-org/react";
 
 

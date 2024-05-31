@@ -1,13 +1,8 @@
 import { use } from "react";
-
 import { Link } from "@nextui-org/link";
-
 import AnimeSlider from "@/components/Slider";
-
 import Footer from "@/components/footer";
-
 import { getPopularAnime, getTrendingAnime } from "@/functions/anime";
-
 import { HeroSlider } from "@/components/HeroSlider";
 
 export default function Home() {

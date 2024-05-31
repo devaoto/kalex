@@ -1,22 +1,22 @@
 "use client";
 
+import { getPopularAnime } from "@/functions/clientRequests";
+import { ConsumetAnimePage, ExtendedAnimePage } from "@/types/consumet";
 import { useEffect, useState } from "react";
-import { Card } from "./card";
+import { Card } from "./Card";
 import { Pagination } from "@nextui-org/react";
-import { getTrendingAnime } from "@/functions/clientRequests";
-import { ExtendedAnimePage } from "@/types/consumet";
 
-export default function Trending() {
+export default function Popular() {
   const [page, setPage] = useState(1);
-  const [trending, setTrending] = useState<ExtendedAnimePage | null>(null);
+  const [popular, setPopular] = useState<ExtendedAnimePage | null>(null);
 
   useEffect(() => {
-    fetchTrendingAnime(page);
+    fetchPopularAnime(page);
   }, [page]);
 
-  const fetchTrendingAnime = async (currentPage: number) => {
-    const response = await getTrendingAnime(currentPage, 46);
-    setTrending(response!);
+  const fetchPopularAnime = async (currentPage: number) => {
+    const response = await getPopularAnime(currentPage, 46);
+    setPopular(response!);
   };
 
   const handlePageChange = (newPage: number) => {
@@ -26,18 +26,19 @@ export default function Trending() {
   return (
     <div className="overflow-x-hidden">
       <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-        {trending?.results.map((a) => {
+        {popular?.results.map((a) => {
           return <Card key={a.id} anime={a} />;
         })}
       </div>
       <div className="mt-10">
-        {trending && (
+        {popular && (
           <Pagination
-            total={trending.totalPages}
+            total={popular.totalPages}
             initialPage={page}
             onChange={handlePageChange}
           />
         )}
       </div>
     </div>
-  )};
+  );
+}
