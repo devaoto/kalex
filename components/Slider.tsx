@@ -10,14 +10,14 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 
-import { Anime } from "@/types/consumet";
+import { ConsumetAnime } from "@/types/consumet";
 import "@/styles/slider.css";
 
 export default function AnimeSlider({
   animeData,
   options,
 }: {
-  animeData: Anime[];
+  animeData: ConsumetAnime[];
   options?: EmblaOptionsType;
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
