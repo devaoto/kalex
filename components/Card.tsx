@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "./slider.css";
 import { ConsumetAnimePage } from "@/types/consumet";
 import { useRef, useState } from "react";
-import { HeartFilledIcon } from "./icons";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { GenerateColoredElementByStatus } from "@/functions/jsxUtilityFunctions";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -144,7 +144,7 @@ export const Cards = ({ data }: { data: ConsumetAnimePage }) => {
                   borderRadius: 'inherit',
                 }}
               >
-                <HeartFilledIcon />
+                <FaArrowLeft />
               </motion.button>
             )}
             <motion.button
@@ -162,7 +162,7 @@ export const Cards = ({ data }: { data: ConsumetAnimePage }) => {
                 borderRadius: 'inherit',
               }}
             >
-              <HeartFilledIcon />
+              <FaArrowRight />
             </motion.button>
           </div>
         )}

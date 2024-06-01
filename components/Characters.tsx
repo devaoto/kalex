@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { CharacterRes } from "@/types/site";
+import { AnimeInfo, CharacterRes, ICharacter } from "@/types/site";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { HeartFilledIcon } from "./icons";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Swiper as SwiperType } from "swiper";
 import { Tooltip } from "@nextui-org/react";
 
@@ -44,13 +44,13 @@ export const Characters = ({ characters }: { characters: CharacterRes }) => {
             className="cursor-pointer duration-200 hover:fill-slate-400"
             onClick={() => swiperRef.current?.slidePrev()}
           >
-            <HeartFilledIcon />
+            <FaArrowLeft />
           </button>
           <button
             className="cursor-pointer duration-200 hover:fill-slate-400"
             onClick={() => swiperRef.current?.slideNext()}
           >
-            <HeartFilledIcon />
+            <FaArrowRight />
           </button>
         </div>
         {characters.characters.map((c, i) => {
