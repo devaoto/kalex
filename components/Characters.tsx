@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { AnimeInfo, CharacterRes, ICharacter } from "@/types/site";
+import { CharacterRes } from "@/types/site";
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";

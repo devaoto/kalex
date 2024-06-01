@@ -5,7 +5,7 @@ import { MetadataRoute } from 'next';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const anime = (await getTrendingAnime()) as ConsumetAnimePage;
   const animeEntries: MetadataRoute.Sitemap = anime.results.map(
-    ({ id, title }) => ({
+    ({ id }) => ({
       url: `${process.env.NEXT_PUBLIC_DOMAIN}/watch/${id}/1`,
       lastModefied: new Date(),
       changeFrequency: 'daily',
