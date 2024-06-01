@@ -114,11 +114,7 @@ export const getTrendingAnime = async (page = 1, perPage = 24) => {
             thumbnail: item.trailer?.thumbnail,
           },
           description: item.description,
-          status: item.Ongoing,
-                  item.Completed,
-                  item.Hiatus,
-                  item.Not_yet_aired,
-                  item.Cancelled,
+          status: item.status,
           cover:
             item.bannerImage ??
             item.coverImage.extraLarge ??
