@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { IEpisode } from '@/functions/utilityFunctions';
 import Link from 'next/link';
-import { BiGrid, BiLayout, BiAlignLeft } from '@/components/icons';
+import { BiGrid, BiLayout, BiAlignLeft } from 'react-icons/bi';
 import { Button, Image, Tooltip } from '@nextui-org/react';
 import { useSSRLocalStorage } from '@/hooks/useSSRLocalStorage';
 
